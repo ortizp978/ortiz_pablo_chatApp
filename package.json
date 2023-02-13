@@ -15,6 +15,14 @@
   "author": "PBO",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "cookie-parser": "^1.4.5",
+    "jquery": "^3.4.1",
+    "multer": "^1.4.2",
+    "popper.js": "^1.16.0",
+    "request": "^2.88.2",
+    "socket.io": "^2.3.0"
   }
 }

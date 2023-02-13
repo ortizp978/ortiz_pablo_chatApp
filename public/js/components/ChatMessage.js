@@ -1,4 +1,7 @@
 export default {
+
+   
+
     name: 'TheChatMessageComponent',
     props: ['message'],
 

@@ -25,7 +25,7 @@ server.listen(port, () => {
   console.log(`listening on ${port}`);
 });
 
-//sovket.io stuff goes here
+//socket.io stuff goes here
 io.on('connection', (socket) => {
   console.log('a user connected');
   socket.emit('connected', { sID: socket.id, message: 'new connection' });
@@ -43,5 +43,5 @@ io.on('connection', (socket) => {
     console.log(user);
 
     io.emit('typing', { currentlytyping: user })
-  })
+  })  
 });
