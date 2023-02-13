@@ -105,6 +105,9 @@ body {
     padding-left: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: gray;
 }
 
 #main-headline { text-align: center; margin-bottom: 0.8em; }
@@ -118,4 +121,16 @@ input[type="submit"] {
     margin-top: 1em; 
     padding: 8px 12px; 
     border-radius: 0.5em; 
+    background-color: #5ED7F2;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    transition: scale 0.2s ease;
+}
+
+input:hover {scale: 110%;}
+
+.message {
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+    padding: 5px;
 }
