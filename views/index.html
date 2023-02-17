@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/css/main.css'/>
+
+    <title>Chat</title>
+</head>
+<body>
+    <main id="app">
+    <Section class="core">
+        <img src="images/LetsChatLogo.svg" alt="Lets Chat Logo">
+        <section class="two_columns">
+            <section class="messages_box">
+                <ul id="messages">
+                    <!-- render a new message component for every message -->
+                    <newmsg v-for="message in messages" :message="message"></newmsg>
+                </ul>
+            </section>
+            <section class="text_box">
+
+                <div class="chatroom">
+                    <user>Hello</user>
+                </div>
+
+                <input id="nickname" v-model="nickname" type="text" placeholder="Nickname">
+
+                <form>    
+                <textarea @focus="catchTextFocus" v-model="message" id="textarea" class="message" autocomplete="off"></textarea>
+
+                <!-- <p v-if="typing">{{ typist }}</p>
+                <usertyping>typing</usertyping> -->
+
+                <input @click.prevent="dispatchMessage" type="submit" value="SEND">
+                </form>
+            </section>
+        </section>
+    </Section>
+    </main>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/main.js" type="module" defer></script>
+    
+</body>
+</html>
