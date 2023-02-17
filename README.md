@@ -1,4 +1,4 @@
-![Main logo](images/LetsChatLogo.svg "Main logo")
+![Main logo](public/images/LetsChatLogo.svg "Main logo")
 
 # MINI app
 
