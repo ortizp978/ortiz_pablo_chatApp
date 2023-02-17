@@ -43,5 +43,18 @@ io.on('connection', (socket) => {
     console.log(user);
 
     io.emit('typing', { currentlytyping: user })
-  })  
+  });
+
+  socket.on('stopTyping', function(user) {
+    console.log(user);
+    io.emit('stopTyping', { currentlytyping: user });
+});
+
+  socket.emit('connected', {sID: socket.id, message: 'new connection'});
+
+
+  socket.on ('typing', (data) => {
+    socket.broadcast.emit('typing', (data));
+    });
+
 });
